@@ -227,9 +227,12 @@ Share volume (storage/data) among different containers
 Attach volume to container
 On deleting container volume does not delete
 
+### create volume
+``` 
+docker volume create <volume name>
+```
 ### Commands
 ```
 docker run --name MyJenkins1 -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins
 docker run --name MyJenkins2 -v myvol1:/var/jenkins_home -p 9090:8080 -p 60000:50000 jenkins
-docker run --name MyJenkins3 -v /Users/raghav/Desktop/Jenkins_Home:/var/jenkins_home -p 9191:8080 -p 40000:50000 jenkins
-```
+docker run --name MyJenkins3 -v /Users/harsha/Desktop/Jenkins_Home:/var/jenkins_home -p 9191:8080 -p 40000:50000 jenkins
